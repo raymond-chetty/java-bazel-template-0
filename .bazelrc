@@ -1,0 +1,91 @@
+# https://bazel.build/docs/user-manual#java-language-version
+# https://bazel.build/run/bazelrc
+
+# WARNING: Option 'java_toolchain' is deprecated
+
+#--extra_toolchains=toolchain_java11,toolchain_jdk_17,toolchain_jdk_20
+
+# local jdk
+build:local --java_language_version=
+build:local --tool_java_language_version=
+#build:local --java_toolchain=toolchain
+build:local --java_runtime_version=local_jdk
+build:local --tool_java_runtime_version=local_jdk
+test:local --java_language_version=
+test:local --tool_java_language_version=
+#test:local --java_toolchain=toolchain
+test:local --java_runtime_version=local_jdk
+test:local --tool_java_runtime_version=local_jdk
+run:local --java_language_version=
+run:local --tool_java_language_version=
+#run:local --java_toolchain=toolchain
+run:local --java_runtime_version=local_jdk
+run:local --tool_java_runtime_version=local_jdk
+
+# Default java configuration: same as java20
+build --java_language_version=20
+build --tool_java_language_version=20
+#build --java_toolchain=toolchain_jdk_20
+build --java_runtime_version=remotejdk_20
+build --tool_java_runtime_version=remotejdk_20
+test --java_language_version=20
+test --tool_java_language_version=20
+#test --java_toolchain=toolchain_jdk_20
+test --java_runtime_version=remotejdk_20
+test --tool_java_runtime_version=remotejdk_20
+run --java_language_version=20
+run --tool_java_language_version=20
+#run --java_toolchain=toolchain_jdk_20
+run --java_runtime_version=remotejdk_20
+run --tool_java_runtime_version=remotejdk_20
+
+# remotejdk_20
+build:java20 --java_language_version=20
+build:java20 --tool_java_language_version=20
+#build:java20 --java_toolchain=toolchain_jdk_20
+build:java20 --java_runtime_version=remotejdk_20
+build:java20 --tool_java_runtime_version=remotejdk_20
+test:java20 --java_language_version=20
+test:java20 --tool_java_language_version=20
+#test:java20 --java_toolchain=toolchain_jdk_20
+test:java20 --java_runtime_version=remotejdk_20
+test:java20 --tool_java_runtime_version=remotejdk_20
+run:java20 --java_language_version=20
+run:java20 --tool_java_language_version=20
+#run:java20 --java_toolchain=toolchain_jdk_20
+run:java20 --java_runtime_version=remotejdk_20
+run:java20 --tool_java_runtime_version=remotejdk_20
+
+# remotejdk_17
+build:java17 --java_language_version=17
+build:java17 --tool_java_language_version=17
+#build:java17 --java_toolchain=toolchain_jdk_17
+build:java17 --java_runtime_version=remotejdk_17
+build:java17 --tool_java_runtime_version=remotejdk_17
+test:java17 --java_language_version=17
+test:java17 --tool_java_language_version=17
+#test:java17 --java_toolchain=toolchain_jdk_17
+test:java17 --java_runtime_version=remotejdk_17
+test:java17 --tool_java_runtime_version=remotejdk_17
+run:java17 --java_language_version=17
+run:java17 --tool_java_language_version=17
+#run:java17 --java_toolchain=toolchain_jdk_17
+run:java17 --java_runtime_version=remotejdk_17
+run:java17 --tool_java_runtime_version=remotejdk_17
+
+# remotejdk_11
+build:java11 --java_language_version=11
+build:java11 --tool_java_language_version=11
+#build:java11 --java_toolchain=toolchain_jdk_11
+build:java11 --java_runtime_version=remotejdk_11
+build:java11 --tool_java_runtime_version=remotejdk_11
+test:java11 --java_language_version=11
+test:java11 --tool_java_language_version=11
+#test:java11 --java_toolchain=toolchain_jdk_11
+test:java11 --java_runtime_version=remotejdk_11
+test:java11 --tool_java_runtime_version=remotejdk_11
+run:java11 --java_language_version=11
+run:java11 --tool_java_language_version=11
+#run:java11 --java_toolchain=toolchain_jdk_11
+run:java11 --java_runtime_version=remotejdk_11
+run:java11 --tool_java_runtime_version=remotejdk_11
